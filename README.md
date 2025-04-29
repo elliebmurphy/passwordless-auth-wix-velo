@@ -45,14 +45,13 @@ While built for Wix, the design principles behind this project are applicable to
    User enters code → backend checks validity → authenticates the user.
 
 3. **Security**:  
-   Codes expire after [X] minutes to prevent misuse.
+   Codes expire after 10 minutes to prevent misuse.
 
 ---
 
 ## Code Files
 
 - **wix-passwordless.js** — The full implementation using Wix libraries.
-- **generic-passwordless.js** — A framework-independent version, demonstrating the same logic without Wix APIs.
 
 ---
 
@@ -68,13 +67,14 @@ While built for Wix, the design principles behind this project are applicable to
 
 - Add rate limiting for code requests
 - Enhance monitoring for failed login attempts
-- Use token-based session instead of Wix default sessions
+- Adapt to custom or WP sites
+  
 
 ---
 
 ## About This Project
 
-This was developed as part of a customer portal modernization project, focused on improving the user experience and aligning with security best practices in web authentication.
+This was developed as part of a customer portal project, focused on improving the user experience and aligning with security best practices in web authentication.
 
 ---
 
