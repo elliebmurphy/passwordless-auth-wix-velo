@@ -75,19 +75,6 @@ export const generateSessionToken = webMethod(
     },
 );
 
-export const loginWithToken = webMethod(
-    Permissions.Anyone,
-    async ({ token }) => {
-        try {
-            const session = await authentication.approveByToken(token);
-            return session;
-        } catch (error) {
-            console.error('Error logging in with token:', error);
-            throw new Error('Failed to log in with token');
-        }
-    }
-)
-
 
 function generateVerificationCode() {
     return Math.floor(1000 + Math.random() * 9000).toString();
